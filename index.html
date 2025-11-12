@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hello — Page simple</title>
+    <style>
+      :root { --bg: #0f172a; --card: #0b1220; --accent: #60a5fa; --text: #e6eef8; }
+      html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
+      body{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#001219 0%, #002b36 100%);color:var(--text)}
+      .card{background:rgba(255,255,255,0.03);padding:2rem;border-radius:12px;box-shadow:0 6px 20px rgba(2,6,23,0.6);text-align:center;min-width:260px}
+      h1{font-size:2rem;margin:0 0 0.5rem}
+      p{margin:0 0 1rem;opacity:0.9}
+      button{background:transparent;border:2px solid var(--accent);color:var(--accent);padding:0.5rem 0.9rem;border-radius:8px;cursor:pointer;font-weight:600}
+      button:active{transform:translateY(1px)}
+      footer{margin-top:1rem;font-size:0.85rem;opacity:0.75}
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1 id="greeting">Hello</h1>
+      <p>Clique sur le bouton pour basculer l'accueil en français ou anglais.</p>
+      <button id="toggle">Basculer / Toggle</button>
+      <footer>Fichier : <code>page-hello.html</code></footer>
+    </div>
+
+    <script>
+      const greetings = ['Hello','Bonjour','Hola','Ciao','こんにちは'];
+      let i = 0;
+      const el = document.getElementById('greeting');
+      document.getElementById('toggle').addEventListener('click', ()=>{
+        i = (i+1) % greetings.length;
+        el.textContent = greetings[i];
+      });
+    </script>
+  </body>
+</html>
