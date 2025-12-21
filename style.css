@@ -1,0 +1,21 @@
+h1 {
+  color: blue;
+}
+
+body {
+  color: violet;
+  font-family: 'Courier New', Courier, monospace;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+div {
+  background-color: aliceblue;
+}
+
+#pdp {
+  width: 250px;
+}
