@@ -1,46 +1,407 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Meet Céleste Lecamp, an EPITA computer science student interested in technology, climbing, and new challenges."
+    >
     <link rel="stylesheet" href="style.css">
-    <title> RxCLyx's Website </title>
-
-
+    <title>Céleste Lecamp | Portfolio</title>
   </head>
   <body>
-  <div>
-    <h1>
-      Hello, I'm RxCLyx 🫡
-    </h1>
-    <img src="pdp.jpg" id="pdp">
-    <p>
-      I'm a student first year student at Epita in France !
-      I'm trying to learn how to build a website by myself !
-    </p>
+    <header class="site-header">
+      <a class="brand" href="#home">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="wordmark">Portfolio de Céleste Lecamp</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#schools">Schools</a>
+        <a href="#experience">Experience</a>
+        <a href="#community">Community</a>
+        <a href="#projects">Projects</a>
+        <a href="#interests">Interests</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+        Dark mode
+      </button>
+    </header>
 
-    <a href="https://www.epita.fr/" target="_blank" class="btn-blue"> Epita </a>
-  </div>
-  <div>
-    <h2>
-      SPORT
-    </h2>
-    <p>
-      I'm passionate by climbing
-    </p>
-  </div>
-  <div>
-    <h2>
-      TRAVEL
-    </h2>
-    <p>
-      I also really enjoy travelling and I plan to study abroad later on !
-    </p>
-  </div>
+    <main>
+      <section class="hero" id="home">
+        <img class="portrait" src="celeste-portrait.png" alt="Portrait of Céleste">
+        <div class="hero-copy">
+          <h1>Hello, I'm Céleste</h1>
+          <p class="hero-intro">
+            I'm a 19-year-old second-year student at EPITA, a French engineering
+            school specializing in computer science. I love learning how things
+            work, solving problems, and turning ideas into projects.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <p class="eyebrow">A little about me</p>
+        <h2>Learning, building, and staying curious.</h2>
+        <p class="section-intro">
+          I'm a second-year computer engineering student at EPITA, curious
+          about how things work and how ideas become real projects. Technology,
+          sports, and teamwork keep me learning, building, and looking for new
+          challenges.
+        </p>
+      </section>
+
+      <section class="education" id="schools" aria-labelledby="schools-title">
+        <div class="mountain-art" role="group" aria-label="Interactive school route map">
+          <img src="mountains.png" alt="">
+          <span class="mountain-cleanup"></span>
+          <button class="mountain-stop stop-source" type="button" data-school-target="school-source" aria-label="Explore La Source Middle and High School"></button>
+          <button class="mountain-stop stop-epita" type="button" data-school-target="school-epita" aria-label="Explore EPITA"></button>
+          <button class="mountain-stop stop-standard" type="button" data-school-target="school-standard" aria-label="Explore Standard Athletic Club"></button>
+        </div>
+        <h2 class="schools-title" id="schools-title">Schools</h2>
+        <div class="timeline">
+          <article class="timeline-entry" id="school-source" tabindex="-1">
+            <svg class="timeline-mark mark-blue" viewBox="0 0 90 60" aria-hidden="true">
+              <path d="M15 45 70 7"/>
+              <circle cx="15" cy="45" r="15"/>
+              <circle cx="70" cy="7" r="15"/>
+            </svg>
+            <div>
+              <h2>La Source Middle &amp; High School, Meudon (2019–2025)</h2>
+              <ul>
+                <li>French Baccalauréat with Honors</li>
+                <li>National Brevet Diploma with High Honors</li>
+                <li>Specializations: Mathematics, Physics-Chemistry, Computer Science</li>
+                <li>Advanced Mathematics option</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline-entry" id="school-epita" tabindex="-1">
+            <svg class="timeline-mark mark-dark" viewBox="0 0 90 60" aria-hidden="true">
+              <path d="M15 45 70 7"/>
+              <circle cx="15" cy="45" r="15"/>
+              <circle cx="70" cy="7" r="15"/>
+            </svg>
+            <div>
+              <h2>EPITA (2025–Present)</h2>
+              <ul>
+                <li>Computer Engineering Program (English Track)</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline-entry" id="school-standard" tabindex="-1">
+            <svg class="timeline-mark mark-accent" viewBox="0 0 90 60" aria-hidden="true">
+              <path d="M15 45 70 7"/>
+              <circle cx="15" cy="45" r="15"/>
+              <circle cx="70" cy="7" r="15"/>
+            </svg>
+            <div>
+              <h2>Standard Athletic Club</h2>
+              <ul>
+                <li>Part-time position · July 2026–Present</li>
+                <li>Building responsibility and interpersonal skills alongside my studies</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <p class="eyebrow">Work and internships</p>
+        <h2>Experience.</h2>
+        <div class="experience-grid">
+          <article class="card experience-card">
+            <a class="experience-logo-link" href="https://www.saclub.org/" target="_blank" rel="noopener noreferrer" aria-label="Visit Standard Athletic Club website">
+              <img class="experience-logo" src="experience/standard-athletic-club.png" alt="Standard Athletic Club crest">
+            </a>
+            <div>
+              <p class="project-type">Part-time position · July 2026–Present</p>
+              <h3><a class="experience-name" href="https://www.saclub.org/" target="_blank" rel="noopener noreferrer">Standard Athletic Club <span aria-hidden="true">↗</span></a></h3>
+              <p class="experience-summary">A part-time position alongside engineering studies, with a focus on developing professional responsibility and interpersonal skills.</p>
+            </div>
+          </article>
+          <article class="card experience-card">
+            <a class="experience-logo-link" href="https://www.aspala.fr/" target="_blank" rel="noopener noreferrer" aria-label="Visit ASPALA Antony Escalade website">
+              <img class="experience-logo" src="experience/aspala.png" alt="ASPALA Antony Escalade logo">
+            </a>
+            <div>
+              <p class="project-type">Volunteer coach · September 2024–Present</p>
+              <h3><a class="experience-name" href="https://www.aspala.fr/" target="_blank" rel="noopener noreferrer">ASPALA Antony Escalade <span aria-hidden="true">↗</span></a></h3>
+              <p class="experience-summary">Since September 2024, weekly sessions for 20 adult beginners have covered essential safety procedures and climbing fundamentals, with guidance adapted to each participant.</p>
+            </div>
+          </article>
+          <article class="card experience-card">
+            <a class="experience-logo-link" href="https://www.lisn.upsaclay.fr/" target="_blank" rel="noopener noreferrer" aria-label="Visit LISN website">
+              <img class="experience-logo" src="experience/lisn.png" alt="LISN logo">
+            </a>
+            <div>
+              <p class="project-type">Observation internship · July 2022 · 1 month</p>
+              <h3><a class="experience-name" href="https://www.lisn.upsaclay.fr/" target="_blank" rel="noopener noreferrer">LISN <span aria-hidden="true">↗</span></a></h3>
+              <p class="experience-organization">Laboratoire Interdisciplinaire des Sciences du Numérique</p>
+              <p class="experience-summary">During a placement with a combinatorics researcher at Université Paris-Saclay and CNRS, Python programming and discussions with doctoral students offered an introduction to mathematical research and scientific rigor.</p>
+            </div>
+          </article>
+          <article class="card experience-card">
+            <a class="experience-logo-link" href="https://www.lemonde.fr/" target="_blank" rel="noopener noreferrer" aria-label="Visit Le Monde website">
+              <img class="experience-logo" src="experience/le-monde.png" alt="Le Monde logo">
+            </a>
+            <div>
+              <p class="project-type">Observation internship · July 2022 · 1 month</p>
+              <h3><a class="experience-name" href="https://www.lemonde.fr/" target="_blank" rel="noopener noreferrer">Le Monde <span aria-hidden="true">↗</span></a></h3>
+              <p class="experience-summary">The placement included shadowing a journalist and attending an interview, providing first-hand insight into reporting and current affairs.</p>
+            </div>
+          </article>
+          <article class="card experience-card">
+            <a class="experience-logo-link" href="https://arkose.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Arkose website">
+              <img class="experience-logo" src="experience/arkose.png" alt="Arkose logo">
+            </a>
+            <div>
+              <p class="project-type">Observation internship · July 2021 · 1 month</p>
+              <h3><a class="experience-name" href="https://arkose.com/" target="_blank" rel="noopener noreferrer">Arkose <span aria-hidden="true">↗</span></a></h3>
+              <p class="experience-summary">Responsibilities at the Massy climbing gym included café service, climbing-product sales, and contributing to new bouldering routes—building versatility and creativity.</p>
+            </div>
+          </article>
+          <article class="card experience-card">
+            <a class="experience-logo-link" href="https://www.restaurants-toureiffel.com/fr/restaurant-jules-verne.html" target="_blank" rel="noopener noreferrer" aria-label="Visit Le Jules Verne restaurant website">
+              <img class="experience-logo" src="experience/le-jules-verne.png" alt="Le Jules Verne logo">
+            </a>
+            <div>
+              <p class="project-type">Observation internship · April 2021 · 1 month</p>
+              <h3><a class="experience-name" href="https://www.restaurants-toureiffel.com/fr/restaurant-jules-verne.html" target="_blank" rel="noopener noreferrer">Le Jules Verne <span aria-hidden="true">↗</span></a></h3>
+              <p class="experience-summary">A pastry internship introducing the precision, discipline, and high standards of a Michelin-starred kitchen.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="community">
+        <p class="eyebrow">Community &amp; initiative</p>
+        <h2>Taking action together.</h2>
+        <div class="info-grid">
+          <article class="card">
+            <img class="section-illustration illustration-la-source" src="illustrations/la-source.png" alt="La Source school logo">
+            <h3>Agenda 21 · Reducing food waste</h3>
+            <p class="experience-summary">The middle-school Agenda 21 workshop developed a chicken coop to repurpose cafeteria leftovers. Featured in Image Doc (issue 371), the project continues to benefit the school, where the chickens still live.</p>
+          </article>
+          <article class="card">
+            <img class="section-illustration illustration-unesco" src="illustrations/unesco.png" alt="UNESCO logo">
+            <h3>UNESCO workshop · Solidarity projects</h3>
+            <p class="experience-summary">The high-school UNESCO workshop has organized fundraisers for Imagine for Margo and Edenia, awareness activities about disposable e-cigarettes, and preparations for a Run Against Hunger.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <p class="eyebrow">Selected project</p>
+        <h2>Things I've worked on.</h2>
+        <article class="card project-card">
+          <div class="project-copy">
+            <p class="project-type">First-year team project · Python · Game development</p>
+            <h3>Queen Amann</h3>
+            <p>
+              As part of my first-year project, I collaborated with four other
+              students to design and develop Queen Amann, a 2D platform game
+              created from concept to completion. Set in a pastry-themed world,
+              the game follows an adventure to gather ingredients and save Queen
+              Amann.
+            </p>
+            <p>
+              We worked across the full game development process, including game
+              design, programming, asset integration, testing, and team
+              coordination. Building a complete playable game gave me hands-on
+              experience and strengthened my skills in:
+            </p>
+            <ul class="strength-list">
+              <li>Teamwork and collaborative development</li>
+              <li>Project planning and organization</li>
+              <li>Game design and implementation</li>
+              <li>Problem-solving and iterative development</li>
+              <li>Communication within a team</li>
+            </ul>
+            <a
+              class="text-link"
+              href="https://queenamannquatrequarts.github.io/QUATRE_QUARTS_WEBSITE/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Visit the Queen Amann project website <span aria-hidden="true">↗</span></a>
+          </div>
+          <img class="section-illustration project-illustration illustration-game" src="illustrations/queen-amann.png" alt="Queen Amann game characters">
+        </article>
+      </section>
+
+      <section class="section" id="skills">
+        <p class="eyebrow">What I bring</p>
+        <h2>Skills and strengths.</h2>
+        <div class="info-grid">
+          <article class="card">
+            <h3>Technical skills</h3>
+            <ul class="tag-list" aria-label="Technical skills">
+              <li>Python</li>
+              <li>C</li>
+              <li>Git</li>
+              <li>Linux</li>
+              <li>macOS</li>
+            </ul>
+            <p class="skill-detail"><strong>Languages</strong><span>French (native) · English (C1, TOEFL)</span></p>
+            <p class="skill-detail"><strong>Driving licence</strong><span>Category B</span></p>
+          </article>
+          <article class="card">
+            <h3>Soft skills</h3>
+            <ul class="strength-list">
+              <li><strong>Curiosity</strong> — always eager to discover new ideas and technologies.</li>
+              <li><strong>Perseverance</strong> — competitive climbing taught me to learn from challenges.</li>
+              <li><strong>Teamwork</strong> — I enjoy collaborating and contributing to shared projects.</li>
+              <li><strong>Initiative</strong> — I like taking responsibility and turning ideas into action.</li>
+              <li><strong>Communication</strong> — coaching beginner climbers taught me to adapt how I explain things.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="interests">
+        <p class="eyebrow">Outside interests</p>
+        <h2>Interests.</h2>
+        <div class="info-grid">
+          <article class="card">
+            <img class="section-illustration illustration-climbing" src="illustrations/climbing-wall.png" alt="Indoor climbing wall at ASPALA Antony Escalade">
+            <h3>Competitive climbing</h3>
+            <p class="experience-summary">Six years of climbing and six hours of weekly training have led to departmental and regional titles in bouldering and lead, regional-team selection, French youth-team trials, and a top-25 finish at the French Championships. The sport continues to develop persistence and resilience.</p>
+          </article>
+          <article class="card">
+            <img class="section-illustration illustration-epita" src="illustrations/epita.png" alt="EPITA engineering school logo">
+            <h3>Technology, mathematics, and travel</h3>
+            <p>
+              I'm drawn to programming, mathematical problem-solving, and
+              challenging projects. Experiences in California and Germany have
+              also sparked my interest in other cultures and international
+              environments.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="international-experience">
+        <p class="eyebrow">International experience</p>
+        <h2>A student exchange in California.</h2>
+        <article class="card">
+          <img class="section-illustration exchange-illustration illustration-california" src="illustrations/california.png" alt="The Golden Gate Bridge in San Francisco">
+          <p class="project-type">Exchange student · February–March 2022</p>
+          <h3>Silicon Valley International School</h3>
+          <p class="experience-summary">A month-long exchange in Palo Alto, living with a German-American host family and attending Silicon Valley International School, strengthened English skills and intercultural understanding. Visits to Google’s offices and Stanford offered a glimpse into Silicon Valley’s innovative and academic culture. The experience led to a return visit the following year and several trips to Germany to reconnect with friends.</p>
+        </article>
+      </section>
+
+      <section class="section goals">
+        <p class="eyebrow">Looking ahead</p>
+        <h2>My career goals.</h2>
+        <p class="section-intro">
+          I want to become an engineer who develops innovative, meaningful
+          technology. At EPITA, I'm working to strengthen my programming skills,
+          deepen my understanding of computer science, and gain practical
+          experience through challenging projects.
+        </p>
+        <p class="section-intro">
+          I'm eager to explore different fields, learn from experienced
+          professionals, and discover where I can make the greatest impact. In
+          the long term, I hope to contribute to meaningful projects in a
+          stimulating, collaborative, and international environment.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Thanks for stopping by.</p>
+      <a
+        class="text-link"
+        href="https://www.linkedin.com/in/c%C3%A9leste-lecamp-b1870022a/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Connect on LinkedIn <span aria-hidden="true">↗</span></a>
+    </footer>
+    <script>
+      const mountainStops = document.querySelectorAll(".mountain-stop");
+      const schoolEntries = document.querySelectorAll(".timeline-entry");
+
+      function selectSchool(schoolId) {
+        schoolEntries.forEach((entry) => {
+          entry.classList.toggle("is-selected", entry.id === schoolId);
+        });
+        mountainStops.forEach((stop) => {
+          stop.setAttribute(
+            "aria-pressed",
+            String(stop.dataset.schoolTarget === schoolId)
+          );
+        });
+      }
+
+      mountainStops.forEach((stop) => {
+        stop.setAttribute("aria-pressed", "false");
+        stop.addEventListener("click", () => {
+          const school = document.getElementById(stop.dataset.schoolTarget);
+          selectSchool(school.id);
+          school.focus({ preventScroll: true });
+          school.scrollIntoView({
+            behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+              ? "auto"
+              : "smooth",
+            block: "center"
+          });
+        });
+      });
+
+      schoolEntries.forEach((entry) => {
+        entry.addEventListener("focus", () => selectSchool(entry.id));
+        entry.addEventListener("mouseenter", () => selectSchool(entry.id));
+      });
+
+      const pageSections = document.querySelectorAll(
+        "main > section[id], #about"
+      );
+      const sectionLinks = document.querySelectorAll('.site-header nav a[href^="#"]');
+      const sectionObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            sectionLinks.forEach((link) => {
+              if (link.getAttribute("href") === `#${entry.target.id}`) {
+                link.setAttribute("aria-current", "location");
+              } else {
+                link.removeAttribute("aria-current");
+              }
+            });
+          });
+        },
+        { rootMargin: "-25% 0px -65% 0px" }
+      );
+      pageSections.forEach((section) => sectionObserver.observe(section));
+
+      const themeToggle = document.querySelector(".theme-toggle");
+      const savedTheme = localStorage.getItem("theme");
+      const initialTheme = savedTheme === "dark" ? "dark" : "light";
+
+      document.documentElement.dataset.theme = initialTheme;
+      themeToggle.textContent = initialTheme === "dark" ? "Light mode" : "Dark mode";
+      themeToggle.setAttribute(
+        "aria-label",
+        initialTheme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+      );
+      themeToggle.setAttribute("aria-pressed", String(initialTheme === "dark"));
+
+      themeToggle.addEventListener("click", () => {
+        const nextTheme =
+          document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+        document.documentElement.dataset.theme = nextTheme;
+        localStorage.setItem("theme", nextTheme);
+        themeToggle.textContent = nextTheme === "dark" ? "Light mode" : "Dark mode";
+        themeToggle.setAttribute(
+          "aria-label",
+          nextTheme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+        );
+        themeToggle.setAttribute("aria-pressed", String(nextTheme === "dark"));
+      });
+    </script>
   </body>
-
-
 </html>
-
-
-
-<!--- end of file -->
